@@ -17,17 +17,16 @@ function divide(number1, number2) {
 }
 
 function majorChord(startingNote) {
-	var startingNote = parseInt($("#startingNote")val());
   var noteNumber = parseInt(startingNote) % 12;
   var thirdNumber = noteNumber + 4;
   var fifthNumber = noteNumber + 7;
-  return "Root: " + noteNumber + "\nThird: " + thirdNumber + "\nFifth: " + fifthNumber;
 }
 
 ////////////////user interface ///////////////
 
 $(document).ready(function() {
 
+	//adding
 
 	$(".numberInput").submit(function(event){
 		event.preventDefault ();
@@ -38,6 +37,14 @@ $(document).ready(function() {
 		// alert(add(number1, number2));
 		$("#result-label").text(result)
 
+	});
+
+	// chords
+	$(".numberInput").submit(function(event){
+		event.preventDefault ();
+		var startingNote = parseInt($("#startingNote").val());
+		var result = concoct("Root: " + noteNumber + "\nThird: " + thirdNumber + "\nFifth: " + fifthNumber)
+	$("#result-label-chords").text(result);
 	});
 
 });
