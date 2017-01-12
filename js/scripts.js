@@ -16,12 +16,25 @@ function divide(number1, number2) {
     return number1 / number2;
 }
 
-function majorChord(startingNote) {
+function rootNumber(startingNote) {
   var noteNumber = parseInt(startingNote) % 12;
-  var thirdNumber = noteNumber + 4;
-  var fifthNumber = noteNumber + 7;
+	return noteNumber;
 }
-
+function majorThirdNumber(startingNote) {
+	var noteNumber = parseInt(startingNote) % 12;
+	var majorThirdNumber = noteNumber + 4;
+	return majorThirdNumber;
+}
+function minorThirdNumber(startingNote) {
+	var noteNumber = parseInt(startingNote) % 12;
+	var minorThirdNumber = noteNumber + 3;
+	return minorThirdNumber;
+}
+function perfectFifthNumber(startingNote) {
+	var noteNumber = parseInt(startingNote) % 12;
+	var perfectFifthNumber = noteNumber + 7;
+	return perfectFifthNumber;
+}
 ////////////////user interface ///////////////
 
 $(document).ready(function() {
@@ -40,12 +53,12 @@ $(document).ready(function() {
 	});
 
 	// chords
-	// $(".numberInput").submit(function(event){
-	// 	event.preventDefault ();
-	// 	var startingNote = parseInt($("#startingNote").val());
-	// 	var result = "Root: " + noteNumber + "\nThird: " + thirdNumber + "\nFifth: " + fifthNumber;
-	// 	$("#result-label-chords").text(result);
-	// });
+	$(".numberInput").submit(function(event){
+		event.preventDefault ();
+		var startingNote = parseInt($("#startingNote").val());
+		var result = [rootNumber(startinNote), majorThirdNumber(startingNote), perfectFifthNumber(startinNote)];
+		$("#result-label-chords").text(result);
+	});
 
 });
 

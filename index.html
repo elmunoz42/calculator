@@ -42,8 +42,20 @@
             <input id="starting-note" class="form-control" type="text">
           </div><!-- form-group -->
           <div class="form-group">
-            <label for="chord-type">2nd Number</label>
-            <input id="chord-type" class="form-control" type="text">
+            <select class="form-control" id="chord-type" name="">
+              <option value="0">majorChord</option>
+              <option value="1">minorChord</option>
+              <option value="2">diminishedChord</option>
+              <option value="3">augmentedChord</option>
+            </select>
+            <div class="radio">
+              <label>
+                <input type="radio" name="rootPosition" value="rootPosition" checked>Root Position </label>
+              <label>
+                 <input type="radio" name="firstInversion" value="firstInversion">First Inversion </label>
+              <label>
+                <input type="radio" name="secondInversion" value="secondInversion">Second Inversion </label>
+            </div><!--radio-->
           </div><!-- form-group -->
           <button class="submit" type="btn" name="button">compute!</button>
         </form>
