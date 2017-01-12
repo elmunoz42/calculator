@@ -35,17 +35,17 @@ $(document).ready(function() {
 		var result = add(number1, number2);
 		// debugger;
 		// alert(add(number1, number2));
-		$("#result-label").text(result)
+		$("#result-label-add").text(result)
 
 	});
 
 	// chords
-	$(".numberInput").submit(function(event){
-		event.preventDefault ();
-		var startingNote = parseInt($("#startingNote").val());
-		var result = concoct("Root: " + noteNumber + "\nThird: " + thirdNumber + "\nFifth: " + fifthNumber)
-	$("#result-label-chords").text(result);
-	});
+	// $(".numberInput").submit(function(event){
+	// 	event.preventDefault ();
+	// 	var startingNote = parseInt($("#startingNote").val());
+	// 	var result = "Root: " + noteNumber + "\nThird: " + thirdNumber + "\nFifth: " + fifthNumber;
+	// 	$("#result-label-chords").text(result);
+	// });
 
 });
 
