@@ -57,6 +57,7 @@ $(document).ready(function() {
 		event.preventDefault ();
 		var startingNote = parseInt($("#startingNote").val());
 		var result = [rootNumber(startinNote), majorThirdNumber(startingNote), perfectFifthNumber(startinNote)];
+		//ERROR WITH 59//
 		$("#result-label-chords").text(result);
 	});
 
